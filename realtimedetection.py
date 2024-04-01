@@ -2,12 +2,12 @@ import cv2
 from keras.models import model_from_json
 import numpy as np
 # from keras_preprocessing.image import load_img
-json_file = open("E:\\JN\\Face_Emotion_Recognition_Machine_Learning\\facialemotionmodel.json", "r")
+json_file = open("D:\\Code\\Face_Emotion_ML\\emotiondetector.json", "r")
 model_json = json_file.read()
 json_file.close()
 model = model_from_json(model_json)
 
-model.load_weights("facialemotionmodel.h5")
+model.load_weights("D:\\Code\\Face_Emotion_ML\\emotiondetector.h5")
 haar_file=cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 face_cascade=cv2.CascadeClassifier(haar_file)
 
